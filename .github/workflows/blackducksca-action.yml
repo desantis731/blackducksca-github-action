@@ -40,7 +40,7 @@ jobs:
           blackducksca_scan_full: true
           github_token: ${{ secrets.GH_TOKEN }}
           #blackducksca_waitForScan: false
-          # include_diagnostics: false
+          #include_diagnostics: false
           #blackducksca_scan_failure_severities: "ALL"
           
           #Optional- To enable feedback from Black Duck security testing as pull request comment
@@ -48,7 +48,6 @@ jobs:
           #Optional- To enable autoamtic fix pull request creation if vulnerabilities are reported
           #blackduck_automation_fixpr: true
           #Mandatory if blackduck_automation_fixpr or blackduck_automation_prcomment is set true
-          #github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Black Duck PR Scan
         if: ${{ github.event_name == 'pull_request' }}
@@ -73,4 +72,4 @@ jobs:
           blackducksca_prComment_enabled: true
           github_token: ${{ secrets.GITHUB_TOKEN }} # Mandatory when blackduck_automation_prcomment is set to 'true'
           ### Uncomment below configuration if Synopsys Bridge diagnostic files needs to be uploaded
-          # include_diagnostics: true
+          #include_diagnostics: true
