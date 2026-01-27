@@ -27,7 +27,7 @@ jobs:
           NODE_TLS_REJECT_UNAUTHORIZED: 0
           BLACKDUCK_TRUST_CERT: true
           DETECT_DIAGNOSTIC: false
-          #BRIDGE_DETECT_DOWNLOAD_URL: https://repo.blackduck.com/bds-integrations-release/com/blackduck/integration/detect/10.2.1/detect-10.2.1.jar
+          BRIDGE_DETECT_DOWNLOAD_URL: https://repo.blackduck.com/bds-integrations-release/com/blackduck/integration/detect/10.2.1/detect-10.2.1.jar
           #DETECT_EXCLUDED_DIRECTORIES:
         with:
           blackducksca_token: ${{ secrets.BLACKDUCK_API_TOKEN }}
